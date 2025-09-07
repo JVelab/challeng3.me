@@ -1,5 +1,7 @@
 🎮 challeng3.me
 
+
+
 ✨ challeng3.me is a platform designed to manage video game tournaments in a simple and dynamic way. It allows you to manage users, teams, games, and competitions with a robust and scalable system built with Flask + JWT Authentication.
 
     🚀 Main Technologies
@@ -72,7 +74,7 @@ flask db upgrade
 flask run
 
 
-👉 The server will be available at: http://localhost:5000/api
+👉 The server will be available at: http://localhost:3000/
 
 🧪 Testing
 pytest
