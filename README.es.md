@@ -1,81 +1,98 @@
-# Plantilla de WebApp con React JS y Flask API
+🎮 challeng3.me
 
-Construye aplicaciones web usando React.js para el front end y python/flask para tu API backend.
+✨ challeng3.me es una plataforma diseñada para gestionar torneos de videojuegos de manera sencilla y dinámica. Administra usuarios, equipos, videojuegos y competencias con un sistema robusto y escalable, desarrollado con Flask + JWT Authentication.
 
-- La documentación se puede encontrar aquí: https://4geeks.com/docs/start/react-flask-template
-- Aquí hay un video sobre [cómo usar esta plantilla](https://www.youtube.com/watch?v=qBz6Ddd2m38)
-- Integrado con Pipenv para la gestión de paquetes.
-- Despliegue rápido a Render [en solo unos pocos pasos aquí](https://4geeks.com/es/docs/start/despliega-con-render-com).
-- Uso del archivo .env.
-- Integración de SQLAlchemy para la abstracción de bases de datos.
+🚀 Tecnologías principales
 
-### 1) Instalación:
+	🐍 Python 3
 
-> Si usas Github Codespaces (recomendado) o Gitpod, esta plantilla ya vendrá con Python, Node y la base de datos Posgres instalados. Si estás trabajando localmente, asegúrate de instalar Python 3.10, Node.
+	🌐 Flask (API REST)
 
-Se recomienda instalar el backend primero, asegúrate de tener Python 3.10, Pipenv y un motor de base de datos (se recomienda Posgres).
+	🔒 JWT Authentication
 
-1. Instala los paquetes de python: `$ pipenv install`
-2. Crea un archivo .env basado en el .env.example: `$ cp .env.example .env`
-3. Instala tu motor de base de datos y crea tu base de datos, dependiendo de tu base de datos, debes crear una variable DATABASE_URL con uno de los valores posibles, asegúrate de reemplazar los valores con la información de tu base de datos:
+	🗄️ SQLAlchemy (ORM)
 
-| Motor     | DATABASE_URL                                        |
-| --------- | --------------------------------------------------- |
-| SQLite    | sqlite:////test.db                                  |
-| MySQL     | mysql://username:password@localhost:port/example    |
-| Postgres  | postgres://username:password@localhost:5432/example |
+	🐘 PostgreSQL
 
-4. Migra las migraciones: `$ pipenv run migrate` (omite si no has hecho cambios en los modelos en `./src/api/models.py`)
-5. Ejecuta las migraciones: `$ pipenv run upgrade`
-6. Ejecuta la aplicación: `$ pipenv run start`
+	🐳 Docker (opcional para despliegue)
 
-> Nota: Los usuarios de Codespaces pueden conectarse a psql escribiendo: `psql -h localhost -U gitpod example`
+⚡ Características
 
-### Deshacer una migración
+✅ Registro e inicio de sesión de usuarios con JWT
+✅ Gestión de administradores, equipos y jugadores
+✅ Creación y administración de torneos y videojuegos
+✅ Relación entre usuarios ↔ equipos ↔ torneos
+✅ API escalable y lista para integrarse con un frontend o app móvil
 
-También puedes deshacer una migración ejecutando
+📂 Estructura del proyecto
+challeng3.me/
+│── app/
+│   ├── models/        # Modelos de base de datos
+│   ├── routes/        # Rutas de la API
+│   ├── utils/         # Funciones auxiliares (JWT, validaciones, etc.)
+│   └── __init__.py    # Configuración principal de Flask
+│
+│── migrations/        # Archivos de migraciones con Alembic
+│── tests/             # Tests unitarios y de integración
+│── requirements.txt   # Dependencias del proyecto
+│── Dockerfile         # Imagen de Docker
+│── README.md          # Este archivo ✨
 
-```sh
-$ pipenv run downgrade
-```
+⚙️ Instalación y uso
+🔧 Requisitos previos
 
-### Población de la tabla de usuarios en el backend
+Python 3.10+
 
-Para insertar usuarios de prueba en la base de datos, ejecuta el siguiente comando:
+PostgreSQL
 
-```sh
-$ flask insert-test-users 5
-```
+Virtualenv (recomendado)
 
-Y verás el siguiente mensaje:
+Docker (opcional)
 
-```
-    Creating test users
-    test_user1@test.com created.
-    test_user2@test.com created.
-    test_user3@test.com created.
-    test_user4@test.com created.
-    test_user5@test.com created.
-    Users created successfully!
-```
+▶️ Ejecución local
+# 1️⃣ Clonar el repositorio
+git clone https://github.com/tu-usuario/challeng3.me.git
+cd challeng3.me
 
-### **Nota importante para la base de datos y los datos dentro de ella**
+# 2️⃣ Crear entorno virtual
+python -m venv venv
+source venv/bin/activate   # Linux/Mac
+venv\Scripts\activate      # Windows
 
-Cada entorno de Github Codespace tendrá **su propia base de datos**, por lo que si estás trabajando con más personas, cada uno tendrá una base de datos diferente y diferentes registros dentro de ella. Estos datos **se perderán**, así que no pases demasiado tiempo creando registros manualmente para pruebas, en su lugar, puedes automatizar la adición de registros a tu base de datos editando el archivo ```commands.py``` dentro de la carpeta ```/src/api```. Edita la línea 32 de la función ```insert_test_data``` para insertar los datos según tu modelo (usa la función ```insert_test_users``` anterior como ejemplo). Luego, todo lo que necesitas hacer es ejecutar ```pipenv run insert-test-data```.
+# 3️⃣ Instalar dependencias
+pip install -r requirements.txt
 
-### Instalación manual del Front-End:
+# 4️⃣ Configurar variables de entorno
+cp .env.example .env   # Editar credenciales
 
--   Asegúrate de estar usando la versión 20 de node y de que ya hayas instalado y ejecutado correctamente el backend.
+# 5️⃣ Ejecutar migraciones
+flask db upgrade
 
-1. Instala los paquetes: `$ npm install`
-2. ¡Empieza a codificar! inicia el servidor de desarrollo de webpack `$ npm run start`
+# 6️⃣ Levantar el servidor
+flask run
 
-## ¡Publica tu sitio web!
 
-Esta plantilla está 100% lista para desplegarse con Render.com y Heroku en cuestión de minutos. Por favor, lee la [documentación oficial al respecto](https://4geeks.com/docs/start/deploy-to-render-com).
+El servidor quedará disponible en:
+👉 http://localhost:5000/api
 
-### Contribuyentes
+🧪 Testing
+pytest
 
-Esta plantilla fue construida como parte del [Coding Bootcamp](https://4geeksacademy.com/us/coding-bootcamp) de 4Geeks Academy por [Alejandro Sanchez](https://twitter.com/alesanchezr) y muchos otros contribuyentes. Descubre más sobre nuestro [Curso de Desarrollador Full Stack](https://4geeksacademy.com/us/coding-bootcamps/part-time-full-stack-developer) y [Bootcamp de Ciencia de Datos](https://4geeksacademy.com/us/coding-bootcamps/datascience-machine-learning).
+📌 Roadmap
 
-Puedes encontrar otras plantillas y recursos como este en la [página de github de la escuela](https://github.com/4geeksacademy/).
+ Sistema de rankings y estadísticas 🏆
+
+ Notificaciones en tiempo real con WebSockets 🔔
+
+ Dashboard para administradores 📊
+
+ Integración con front-end en React ⚛️
+
+🤝 Contribuciones
+
+¡Las contribuciones son bienvenidas! 🎉
+Haz un fork, crea una rama (feature/nueva-funcionalidad) y envía un PR.
+
+📜 Licencia
+
+Este proyecto está bajo la licencia MIT.
