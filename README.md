@@ -1,8 +1,5 @@
 🎮 challeng3.me
 
-[![Link](https://img.shields.io/badge/Link](https://www.linkedin.com/in/jose-luis-vela-borrego-16a53aa0)  
-
-
 ✨ challeng3.me is a platform designed to manage video game tournaments in a simple and dynamic way. It allows you to manage users, teams, games, and competitions with a robust and scalable system built with Flask + JWT Authentication.
 
     🚀 Main Technologies
