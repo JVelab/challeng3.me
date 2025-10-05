@@ -10,7 +10,7 @@ Flask-JWT-Extended==4.6.0
 
 # Migraciones
 Flask-Migrate==4.0.7  # Incluye Alembic
-python-editor==1.1.0  # Actualizado ligeramente
+python-editor==1.0.4  # Actualizado ligeramente
 
 # Utils
 python-dotenv==1.0.1  # Actualizado de 0.15.0
