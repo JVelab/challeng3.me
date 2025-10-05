@@ -12,7 +12,7 @@ Welcome to **challeng3.me**, a full-stack web application designed to streamline
 
 ## ✨ Features
 
-- **Match & Team Management**: Create, update, and manage matches and teams effortlessly.
+- **Tournaments & Team Management**: Create, update, and manage teams, play tournaments effortlessly.
 - **Tournament Organization**: Build and oversee tournaments with flexible configurations.
 - **User Authentication**: Secure JWT-based authentication for user registration and login.
 - **REST API**: Fully documented API with Swagger for seamless integration.
@@ -131,7 +131,7 @@ Explore the REST API at `/swagger` (e.g., [https://challeng3-me.onrender.com/swa
 
 This project is extensible, with plans to integrate AI-driven features:
 - **Personalized Recommendations**: Leverage machine learning APIs (e.g., Hugging Face) for tailored match and tournament suggestions.
-- **Chatbot Support**: Integrate xAI's Grok for real-time user assistance (see [xAI API](https://x.ai/api)).
+- **Chatbot Support**: For real-time user assistance.
 - **Dynamic Content Generation**: Use AI to create engaging tournament and match descriptions for marketing.
 
 ## 📬 Contact
