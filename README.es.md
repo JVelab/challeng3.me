@@ -105,11 +105,11 @@ Ejecuta las pruebas con pytest:
 pytest
 ```
 
-## 📖 Documentación de la API
-Explora la API REST en `/swagger` (por ejemplo, https://challeng3-me.onrender.com/swagger). La API soporta endpoints para:
+## 📖 Documentación de la APILa API soporta endpoints para:
+- Creación de juegos.
+- Asociaciones entre usuarios, torneos, equipos y juegos.
 - Registro y autenticación de usuarios.
 - Creación, recuperación y gestión de torneos.
-- Asociaciones entre usuarios y torneos.
 
 ## 🌟 ¿Por qué este proyecto?
 challeng3.me demuestra mi capacidad para:
