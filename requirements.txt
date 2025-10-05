@@ -21,3 +21,5 @@ pytest==8.3.2
 
 # Opcional: Para producción en Render (mejor que Flask dev server)
 gunicorn==22.0.0
+
+flask-swagger==0.2.14
