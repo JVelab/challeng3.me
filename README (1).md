@@ -121,7 +121,7 @@ challeng3.me demuestra mi capacidad para:
 
 Este proyecto está diseñado para ser extensible, con planes para integrar funciones de IA como:
 - **Recomendaciones Personalizadas de Torneos**: Usando APIs de machine learning (por ejemplo, Hugging Face).
-- **Soporte de Chatbot**: Impulsado por Grok de xAI para asistencia en tiempo real (ver [xAI API](https://x.ai/api)).
+- **Soporte de Chatbot**: Para asistencia en tiempo real.
 - **Generación de Contenido Dinámico**: Descripciones de torneos generadas por IA para marketing.
 
 ## 📬 Contacto
