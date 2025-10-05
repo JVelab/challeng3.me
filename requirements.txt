@@ -24,3 +24,4 @@ gunicorn==22.0.0
 
 flask-swagger==0.2.14
 flask-cors==5.0.0
+flask-admin==1.6.1
