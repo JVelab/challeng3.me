@@ -116,7 +116,9 @@ pytest
 ```
 
 ## 📖 API Documentation
-Explore the REST API at `/swagger` (e.g., [https://challeng3-me.onrender.com/swagger](https://challeng3-me.onrender.com/swagger)). The API supports endpoints for:
+The API supports endpoints for:
+- Game creation, and associations.
+- User-game, team-game, tournament-game associations.
 - User registration and authentication.
 - Match, team, and tournament creation, retrieval, and management.
 - User-tournament and user-team associations.
